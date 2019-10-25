@@ -31,7 +31,7 @@ int main() {
         cin >> lim;
         cout << "enter value x (rad): ";
         cin >> valueX;
-    }while (lim < 0 || valueX >= 1 || valueX <= -1 || accuracy < 0);{       // if condition true => do cycle
+    }while (lim <= 0 || valueX >= 1 || valueX <= -1 || accuracy < 0);{      // if condition true => do cycle
         for(int k = 0; k <= lim; k++){                                      // cycle filling variable sum
             sum += pow(-1, k)*(pow(valueX, (2*k)+1))/factorial((2*k)+1);
         }
