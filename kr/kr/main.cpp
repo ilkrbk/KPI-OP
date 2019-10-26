@@ -7,10 +7,28 @@
 //
 
 #include <iostream>
-
 using namespace std;
 
 int main() {
-    int b = 5;
-    cout << (3 * 8 / 5 - 6);
+    int limA, limB;
+    int sum = 0;
+    cout << "enter lim a: ";
+    cin >> limA;
+    cout << "enter lim b: ";
+    cin >> limB;
+    
+    for(int k = limA; k <= limB; k++){
+        if(k > 0){
+            int n = k;
+            for(int i = 0; n > i; n--){
+                cout << n % k == 0;
+                if (n % k == 0){
+                    sum += k;
+                    if(sum == n){
+                        cout << n << "/" << endl;
+                    }
+                }
+            }
+        }
+    }
 }

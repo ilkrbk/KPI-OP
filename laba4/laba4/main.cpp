@@ -25,5 +25,5 @@ int main() {
             sum += pow(-1, ++a)*(pow(valueX, i)/i);
         }
     }
-    cout << "result" << sum <<endl;                     // output result
+    cout << "result: " << sum <<endl;                   // output result
 }
