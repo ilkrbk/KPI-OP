@@ -8,39 +8,29 @@
 
 #include <iostream>                                                         // include librery
 #include <cmath>
+#include <iomanip>
 
 using namespace std;
 
-long factorial(long n) {                                                    // function that counts the factorial of n
-    long result = 1;
-    for(int k = 1; k <= n; k++){
-        result *= k;
-    }
-    return result;
-}
-
 int main() {
-    long double accuracy, lim, valueX, result;                              // creating variables
-    long double sum = 0;                                                    // creative variables for summetion cycle
-    string str = "1";
-    int zeroo;
-    do{                                                                     // cycle do performs an action and check condition cycle while
+    int accuracy, lim;                                                              // creating variables
+    double valueX, result;
+    do{                                                                             // cycle do performs an action and check condition cycle while
         cout << "enter accuracy value > 0: ";
         cin >> accuracy;
         cout << "enter lim cycle: ";
         cin >> lim;
-        cout << "enter value x (rad): ";
+        cout << "enter value x (deg): ";
         cin >> valueX;
-    }while (lim <= 0 || valueX >= 1 || valueX <= -1 || accuracy < 0);{      // if condition true => do cycle
-        for(int k = 0; k <= lim; k++){                                      // cycle filling variable sum
-            sum += pow(-1, k)*(pow(valueX, (2*k)+1))/factorial((2*k)+1);
+    }while (lim <= 0 || accuracy < 0);{                                             // if condition true => do cycle
+        result = valueX*(3.14/180);
+        if(lim > 1){
+            for(int k = 1; k < lim; k++){                                           // cycle filling variable sum
+                result += (pow(-1, k)*(result*pow(result, 2)))/(((2*k)+1)*(2*k));
+            }
         }
-        for(int i = 0; i < accuracy; i++){                                  // cycle for changing value
-            str += "0";
-        }
-        zeroo = stoi(str);                                                  // convertion to int
-        result = round(sin(sum)* zeroo)/zeroo;                              // finding accuracy
+        result = sin(result);
+        cout << fixed << setprecision(accuracy) << "sin x = " << result << endl;    // output result
+        
     }
-    cout << "x = " << sum << endl << "sin x = " << result << endl;          // output reesult
 }
-
