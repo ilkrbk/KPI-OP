@@ -27,3 +27,4 @@ int main() {
     }
     cout << "result: " << sum <<endl;                   // output result
 }
+  
