@@ -17,13 +17,13 @@ float enter(int n, float listSqr[]);
 float maximum(float list[], int elems);
 
 int main() {
-    srand((unsigned int)time(NULL));
+    srand((unsigned int)time(NULL));            // call func
     int n;
     cout << "enter n: ";
-    cin >> n;
-    float list[n];
-    enter(n, list);
-    maximum(list, n);
+    cin >> n;                                   // enter n
+    float list[n];                              // creative array list
+    enter(n, list);                             // call func
+    maximum(list, n);                           // call func
     cout << maximum(list, n) << endl;
 }
 float maximum(float list[], int elems){
