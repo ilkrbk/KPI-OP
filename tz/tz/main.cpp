@@ -11,14 +11,30 @@
 using namespace std;
 
 int main(){
-    for(int i = 1; i <= 5; i++){
-        for(int k = 1; k <= 5; k++){
-            if (i == k || i == 6-k){
-                cout << "*";
-            }else{
-                cout << "  ";
-            }
-        }
-        cout << endl;
-    }
+//    for(int i = 1; i <= 5; i++){
+//        for(int k = 1; k <= 5; k++){
+//            if (i == 1 || i == 5 || k == 5 || k == 1){
+//                cout << "* ";
+//            }else{
+//                cout << "  ";
+//            }
+//        }
+//        cout << endl;
+//    }
+//
+//    for (int i = 0; i < 3; i++){
+//        cout << i;
+//    }
+//
+//    int i = 0;
+//    while (i < 3) {
+//        cout << i;
+//        i++;
+//    }
+    int a = 12, b = 5;
+    a = a - b;
+    b = a + b;
+    a = b - a;
+    cout << a << " " << b;
 }
+
