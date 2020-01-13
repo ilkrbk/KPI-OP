@@ -9,6 +9,7 @@
 
 using namespace std;
 int worldsN(string);
+void ennd(int num, int vari, string end, string array[num]);
 
 int main() {
     int count = 0, vari = 0;
@@ -37,6 +38,20 @@ int main() {
             ++count;
         }
     }
+    ennd(num, vari, end, array);
+}
+
+int worldsN(string str){
+    int num = 0;
+    for (int i = 0; i <= str.length(); ++i){
+        if (str[i] == ' '){
+            num++;
+        }
+    }
+    return num;
+}
+
+void ennd(int num, int vari, string end, string array[num]){
     cout << "строка новая: ";
     for(int f = 0; f < num; ++f){
         for (int d = 0; d < end.length(); ++d){
@@ -49,15 +64,4 @@ int main() {
         }
     }
     cout << endl << "кол-во: " << vari << endl;
-
-}
-
-int worldsN(string str){
-    int num = 0;
-    for (int i = 0; i <= str.length(); ++i){
-        if (str[i] == ' '){
-            num++;
-        }
-    }
-    return num;
 }
