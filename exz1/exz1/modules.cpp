@@ -65,7 +65,6 @@ void findRomb(int** matrix, int n){
         }
     }
     cout << "summers: "<< sum << endl << "max: " << max << endl;
-    vector<int>
 }
 
 
